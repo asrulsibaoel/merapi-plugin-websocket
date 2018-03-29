@@ -1,0 +1,25 @@
+{
+  "name": "merapi-plugin-websocket",
+  "version": "1.0.0",
+  "description": "Websocket plugin for Merapi IOC",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asrulsibaoel/merapi-plugin-websocket.git"
+  },
+  "keywords": [
+    "websocket",
+    "merapi",
+    "merapi-plugin",
+    "merapi-websocket"
+  ],
+  "author": "Asrul Sani Ariesandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asrulsibaoel/merapi-plugin-websocket/issues"
+  },
+  "homepage": "https://github.com/asrulsibaoel/merapi-plugin-websocket#readme"
+}
