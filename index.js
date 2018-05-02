@@ -2,26 +2,23 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const router = require("./lib/router");
-const getfn = require("./lib/getfn");
+const WebsocketManager = require("./lib/websocket_manager");
 
 module.exports = function () {
 
     return {
 
         *onBeforeComponentsRegister(container) {
-            container.register("MerapiWebsocket", require("./lib/merapi_websocket"));
+            container.register("WebsocketManager", WebsocketManager);
         },
         typeWebsocket(name, opt) {
-            this.apps.push(name);
-            return function* (config, injector, logger) {
-                
-                return app;
+            // this.apps.push(name);
+            return function* (websocketManager, config) {
+                opt.config = opt.config || "websocket";
+                let cfg = config.default(opt.config, {});
+
+                return websocketManager.initialize(cfg);
             };
-        },
-        *onStart(container) {
-            let socket = yield container.resolve("MerapiWebsocket");
-            yield service.start();
         },
     };
 };
