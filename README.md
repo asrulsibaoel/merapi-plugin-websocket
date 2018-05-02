@@ -21,7 +21,7 @@ Add plugin to dependency list in `package.json`
 Install using npm:
 
 ```
-npm install merapi-plugin-websocket --save
+`npm install merapi-plugin-websocket --save`
 ```
 
 ### Usage
@@ -35,6 +35,12 @@ plugins:
     - websocket
 websocket:
     port: 3030
-    trigger: connection
-```
+    connection:
+        eventOne: componentName.handlerOne
+        eventTwo: componentName.handlerTwo
+        eventTree:
+            subEvent: componentName.handlerTree
+            subEventTwo:
+                subSubEvent: componentName.handlerFour
 
+```
