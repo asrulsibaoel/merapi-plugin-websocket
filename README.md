@@ -21,7 +21,7 @@ Add plugin to dependency list in `package.json`
 Install using npm:
 
 ```
-`npm install merapi-plugin-websocket --save`
+npm install merapi-plugin-websocket --save
 ```
 
 ### Usage
