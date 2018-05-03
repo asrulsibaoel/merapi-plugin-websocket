@@ -9,7 +9,7 @@ module.exports = function () {
     return {
 
         *onBeforeComponentsRegister(container) {
-            container.register("WebsocketManager", WebsocketManager);
+            container.register("websocketManager", WebsocketManager);
         },
         typeWebsocket(name, opt) {
             // this.apps.push(name);
